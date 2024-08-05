@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario de Ejemplo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3cddc6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Barra lateral izquierda */
+        .sidebar-left {
+            width: 10%;
+            background-color: #09c9ad;
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 100%;
+            height: 100vh;
+        }
+
+        /* Contenedor principal para centrar el formulario */
+        .main-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        /* Barra lateral derecha */
+        .sidebar-right {
+            width: 10%;
+            background-color: #09c9ad;
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 100%;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #bf8413;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            background-color: #ccf6f4;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar-left"></div>
+    
+    
+    <div class="main-content">
+        <h1>INICIAR SESIÓN</h1>
+        <form action="procesarFormulario" method="post">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+            
+            <label for="clave">Clave:</label>
+            <input type="password" id="clave" name="clave" placeholder="Clave">
+            
+            
+            <label for="rol">Cargo:</label>
+            <select id="rol" name="rol">
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+                <option value="operario">Operario</option>
+            </select>
+            
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+    
+    
+    <div class="sidebar-right"></div>
+</body>
+</html>
+
+
